@@ -34,8 +34,8 @@ bool isPalindrome(int val) {
 int getLargestPalindrome(int max, int min) {
 	int LP, curr;
 	printf("max: %d\tmin: %d\n", max, min);
-	for (int i = min;i <= max; ++i) {
-		for (int j = min; j <= max; ++j) {
+	for (int i = max;i >= min; --i) {
+		for (int j = i; j >= min; --j) {
 			curr = i * j;
 			if (curr > LP) {
 				if (isPalindrome(curr)) {
